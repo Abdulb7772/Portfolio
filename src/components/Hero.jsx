@@ -5,7 +5,7 @@ export default function Hero() {
     <section className="bg-linear-to-br from-[#010824] via-[#222e57] to-[#010925] h-screen flex flex-col justify-center items-center text-center px-4"
       id="hero"
     >
-      <h1 className="text-5xl font-bold">Hi, I'm Muhammad Abdul Basit</h1>
+      <h1 className="text-5xl font-bold mt-15">Hi, I'm Muhammad Abdul Basit</h1>
       <p className="mt-4 text-lg text-gray-600 dark:text-gray-300">
         Enthusiastic web developer skilled in • HTML • CSS • JavaScript • Angular/React,<br />
         passionate about building responsive, user-friendly applications<br /> 
