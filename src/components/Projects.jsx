@@ -15,9 +15,9 @@ export default function Projects() {
           {projects.slice(0, 6).map((p) => (
             <div
               key={p.id}
-              className="bg-linear-to-br from-[#010824] via-[#141d3b] to-[#010925] border border-gray-200 dark:border-gray-700 rounded-xl p-4 bg-white dark:bg-slate-800 shadow-lg"
+              className="border border-gray-200 dark:border-gray-700 rounded-xl p-6 bg-white dark:bg-gradient-to-br dark:from-[#010824] dark:via-[#141d3b] dark:to-[#010925] shadow-lg hover:shadow-xl transition-shadow"
             >
-              <h3 className="text-lg font-semibold">{p.name}</h3>
+              <h3 className="text-lg font-semibold text-gray-900 dark:text-white">{p.name}</h3>
               <p className="text-sm text-gray-600 dark:text-gray-400 mt-2">
                 {p.description || "No description"}
               </p>

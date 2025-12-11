@@ -2,10 +2,10 @@ import { Github, Linkedin, Mail } from "lucide-react";
 
 export default function Hero() {
   return (
-    <section className="bg-linear-to-br gap-1 from-[#010824] via-[#222e57] to-[#010925] h-screen flex flex-col justify-center items-center text-center px-4"
+    <section className="bg-white dark:bg-linear-to-br dark:from-[#010824] dark:via-[#222e57] dark:to-[#010925] h-screen flex flex-col justify-center items-center text-center px-4"
       id="hero"
     >
-      <h1 className="text-5xl font-bold mt-32">Hi, I'm Muhammad Abdul Basit</h1>
+      <h1 className="text-5xl font-bold mt-32 text-gray-900 dark:text-white">Hi, I'm Muhammad Abdul Basit</h1>
       <p className="mt-4 text-lg text-gray-600 dark:text-gray-300">
         Enthusiastic web developer skilled in • HTML • CSS • JavaScript • Angular/React,<br />
         passionate about building responsive, user-friendly applications<br /> 
