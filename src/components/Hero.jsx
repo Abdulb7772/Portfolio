@@ -2,14 +2,19 @@ import { Github, Linkedin, Mail } from "lucide-react";
 
 export default function Hero() {
   return (
-    <section className="bg-white dark:bg-linear-to-br dark:from-[#010824] dark:via-[#222e57] dark:to-[#010925] h-screen flex flex-col justify-center items-center text-center px-4"
+    <section className="bg-white dark:bg-linear-to-br dark:from-[#010824] dark:via-[#222e57] dark:to-[#010925] min-h-screen flex flex-col justify-center items-center text-center px-4 pt-24 pb-12"
       id="hero"
     >
-      <h1 className="text-5xl font-bold mt-32 text-gray-900 dark:text-white">Hi, I'm Muhammad Abdul Basit</h1>
-      <p className="mt-4 text-lg text-gray-600 dark:text-gray-300">
-        Enthusiastic web developer skilled in • HTML • CSS • JavaScript • Angular/React,<br />
-        passionate about building responsive, user-friendly applications<br /> 
-        and growing as a Frontend Developer.<br />
+      
+      <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 dark:text-white">
+        <span className="profile-icon">
+        <img src="/main.png" alt="Profile" className="icon-img"/>
+        </span>
+        Hi, I'm Muhammad Abdul Basit</h1>
+      <p className="mt-4 text-base sm:text-lg text-gray-600 dark:text-gray-300 max-w-3xl">
+        Enthusiastic web developer skilled in • HTML • CSS • JavaScript • Angular/React,
+        passionate about building responsive, user-friendly applications 
+        and growing as a Frontend Developer.
       </p>
 
       <div className="flex gap-4 mt-15">

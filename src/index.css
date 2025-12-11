@@ -165,3 +165,31 @@ button:focus-visible {
     @apply bg-background text-foreground;
   }
 }
+
+.profile-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;    /* full width so it centers properly */
+}
+
+.icon-img {
+  width: 120px;   /* smaller on mobile */
+  height: 75px;
+  max-width: 100%;
+}
+
+/* Responsive sizing for larger screens */
+@media (min-width: 640px) {
+  .icon-img {
+    width: 150px;
+    height: 93px;
+  }
+}
+
+@media (min-width: 768px) {
+  .icon-img {
+    width: 180px;
+    height: 110px;
+  }
+}
