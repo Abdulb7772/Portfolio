@@ -12,16 +12,18 @@ export default function About() {
 
   return (
     <section id="about" className="py-24 md:py-32 bg-linear-to-br from-[#060131] via-[#212f5e] to-[#010225]">
+      <h2 className="text-4xl font-bold mb-6 text-center">About Me</h2>
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
           <div ref={ref} className="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
             {/* Image/Visual */}
-            <motion.div
+            {/* <motion.div
               initial={{ opacity: 0, x: -50 }}
               animate={isInView ? { opacity: 1, x: 0 } : {}}
               transition={{ duration: 0.6 }}
               className="relative"
-            >
+            > */}
+            <div>
               <div className="relative aspect-square max-w-md mx-auto">
                 <div className="absolute inset-0 bg-linear-to-br from-blue-500/20 to-blue-500/5 rounded-2xl" />
                 <div className="absolute inset-4 bg-white dark:bg-slate-800 rounded-xl border border-gray-200 dark:border-gray-700 overflow-hidden">
@@ -33,13 +35,14 @@ export default function About() {
                 <div className="absolute -top-4 -right-4 w-24 h-24 bg-blue-500/20 rounded-full blur-2xl" />
                 <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-blue-500/10 rounded-full blur-2xl" />
               </div>
-            </motion.div>
+              </div>
+            {/* </motion.div> */}
 
             {/* Content */}
             <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              animate={isInView ? { opacity: 1, x: 0 } : {}}
-              transition={{ duration: 0.6, delay: 0.2 }}
+            //   initial={{ opacity: 0, x: 50 }}
+            //   animate={isInView ? { opacity: 1, x: 0 } : {}}
+            //   transition={{ duration: 0.6, delay: 0.2 }}
               className="bg-white dark:bg-linear-to-br dark:from-[#010824] dark:via-[#141d3b] dark:to-[#010925] border border-gray-200 dark:border-gray-700 rounded-xl p-6 shadow-lg"
             >
               <p className="text-sm font-medium text-blue-600 dark:text-blue-400 mb-2 uppercase tracking-wider">About Me</p>
@@ -69,9 +72,6 @@ export default function About() {
                   {skills.map((skill, index) => (
                     <motion.span
                       key={skill}
-                      initial={{ opacity: 0, scale: 0.8 }}
-                      animate={isInView ? { opacity: 1, scale: 1 } : {}}
-                      transition={{ duration: 0.3, delay: 0.4 + index * 0.05 }}
                       className="px-3 py-1.5 bg-gray-50 dark:bg-slate-800 border border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-300 rounded-full text-sm font-medium"
                     >
                       {skill}

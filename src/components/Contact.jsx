@@ -34,13 +34,13 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="bg-linear-to-br from-[#060131] via-[#212f5e] to-[#010225] h-screen flex flex-col justify-center items-center text-center px-4">
-      <h2 className="text-4xl font-bold mb-6">Contact Me</h2>
+    <section id="contact" className="min-h-screen py-24 px-6 bg-linear-to-br from-[#060131] via-[#212f5e] to-[#010225] flex flex-col justify-center items-center text-center px-4">
+      <h2 className="text-4xl font-bold mt-5 mb-6">Contact Me</h2>
 
       <form
         ref={form}
         onSubmit={sendEmail}
-        className="max-w-lg space-y-4 bg-white dark:bg-neutral-900 p-6 rounded-xl shadow"
+        className="max-w-lg space-y-4 mb-5 bg-white dark:bg-neutral-900 p-6 rounded-xl shadow"
       >
         <input
           type="text"

@@ -1,7 +1,6 @@
 @import "tailwindcss";
 
 @plugin "tailwindcss-animate";
-@import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));
 
@@ -23,10 +22,9 @@ body {
   min-height: 100vh;
 }
 
-/* h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-} */
+h2 {
+  color:white;
+}
 
 button {
   cursor: pointer;

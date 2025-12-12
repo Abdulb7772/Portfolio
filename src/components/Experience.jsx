@@ -1,23 +1,6 @@
 export default function Experience() {
   const experiences = [
     {
-      company: "MAXXPACE",
-      location: "Islamabad, Pakistan",
-      role: "Web Developer Intern",
-      period: "July 2025 - Aug 2025",
-      responsibilities: [
-        "Responsible for development of Merchant Web application (LMS) in React.js.",
-        "Analyzed requirements and worked closely with UI/UX designers to implement user-friendly interfaces into technical specifications along with senior developers and project managers to deliver web applications aligned with client requirements.",
-        "Participate in agile development processes and coordinate with cross-functional teams.",
-        "Ensured cross-browser compatibility and implemented responsive designs across devices.",
-        "Implementing RESTful APIs for seamless client-server communication.",
-        "Managed codebases using Git and participated in code reviews, ensuring adherence to best practices and clean code standards.",
-        "Explored MS SQL Server and developed complex queries for data operations.",
-        "Evaluate user feedback and make necessary improvements.",
-        "Keep up-to-date with emerging web technologies, trends, and best practices."
-      ]
-    },
-    {
       company: "PTCL",
       location: "Islamabad, Pakistan",
       role: "Web Developer Intern",
