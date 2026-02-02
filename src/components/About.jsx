@@ -11,7 +11,7 @@ export default function About() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="about" className="py-24 md:py-32 bg-linear-to-br from-[#060131] via-[#212f5e] to-[#010225]">
+    <section id="about" className="py-24 md:py-32 bg-linear-to-br from-[#2618a5] via-[#5f72b1] to-[#2618a5] dark:from-[#010824] dark:via-[#141d3b] dark:to-[#010925]">
       <h2 className="text-4xl font-bold mb-6 text-center">About Me</h2>
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
@@ -46,7 +46,7 @@ export default function About() {
               className="bg-white dark:bg-linear-to-br dark:from-[#010824] dark:via-[#141d3b] dark:to-[#010925] border border-gray-200 dark:border-gray-700 rounded-xl p-6 shadow-lg"
             >
               <p className="text-sm font-medium text-blue-600 dark:text-blue-400 mb-2 uppercase tracking-wider">About Me</p>
-              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900 dark:text-white">
+              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-600 dark:text-gray-300">
                 Building digital experiences that{" "}
                 <span className="text-blue-600 dark:text-blue-400">matter</span>
               </h2>

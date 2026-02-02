@@ -34,7 +34,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="min-h-screen py-24 px-6 bg-linear-to-br from-[#060131] via-[#212f5e] to-[#010225] flex flex-col justify-center items-center text-center px-4">
+    <section id="contact" className="min-h-screen py-24 bg-linear-to-br from-[#2618a5] via-[#5f72b1] to-[#2618a5] dark:from-[#010824] dark:via-[#141d3b] dark:to-[#010925] flex flex-col justify-center items-center text-center px-4">
       <h2 className="text-4xl font-bold mt-5 mb-6">Contact Me</h2>
 
       <form

@@ -2,7 +2,7 @@ import { Github, Linkedin, Mail } from "lucide-react";
 
 export default function Hero() {
   return (
-    <section className="bg-white dark:bg-linear-to-br dark:from-[#010824] dark:via-[#222e57] dark:to-[#010925] min-h-screen flex flex-col justify-center items-center text-center px-4 pt-24 pb-12"
+    <section className="bg-linear-to-br from-[#2618a5] via-[#5f72b1] to-[#2618a5] dark:from-[#010824] dark:via-[#141d3b] dark:to-[#010925] min-h-screen flex flex-col justify-center items-center text-center px-4 pt-24 pb-12"
       id="hero"
     >
       
@@ -11,7 +11,7 @@ export default function Hero() {
         <img src="/main.png" alt="Profile" className="icon-img"/>
         </span>
         Hi, I'm Muhammad Abdul Basit</h1>
-      <p className="mt-4 text-base sm:text-lg text-gray-600 dark:text-gray-300 max-w-3xl">
+      <p className="mt-4 text-base sm:text-lg text-gray-800 dark:text-gray-300 max-w-3xl">
         Enthusiastic web developer skilled in • HTML • CSS • JavaScript • Angular/React <br />
         passionate about building responsive, user-friendly applications 
         and growing as a Frontend Developer.

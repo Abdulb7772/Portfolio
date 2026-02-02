@@ -30,7 +30,7 @@ export default function Experience() {
   ];
 
   return (
-    <section id="experience" className="min-h-screen py-24 px-6 bg-linear-to-br from-[#060131] via-[#212f5e] to-[#010225]">
+    <section id="experience" className="min-h-screen py-24 px-6 bg-linear-to-br from-[#2618a5] via-[#5f72b1] to-[#2618a5] dark:from-[#010824] dark:via-[#141d3b] dark:to-[#010925]">
       <div className="container mx-auto max-w-6xl">
         <h2 className="text-4xl font-bold mb-12 text-center">Experience</h2>
         
