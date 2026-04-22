@@ -12,7 +12,7 @@ export default function Hero() {
         </span>
         Hi, I'm Muhammad Abdul Basit</h1>
       <p className="mt-4 text-base sm:text-lg text-gray-800 dark:text-gray-300 max-w-3xl">
-        Enthusiastic web developer skilled in • HTML • CSS • JavaScript • Angular/React <br />
+        Software Engineer . Full Stack Developer Intern | TypeScript . React.js . Java Script . Node.js . Angular |  ERP Systems • Online Marketplaces • Payment Integration | Building Fast, Scalable Web Products 
         passionate about building responsive, user-friendly applications 
         and growing as a Frontend Developer.
       </p>
