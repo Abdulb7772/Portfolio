@@ -14,7 +14,7 @@ export default function Hero() {
       <p className="mt-4 text-base sm:text-lg text-gray-800 dark:text-gray-300 max-w-3xl">
         Software Engineer . Full Stack Developer Intern | TypeScript . React.js . Java Script . Node.js . Angular |  ERP Systems • Online Marketplaces • Payment Integration | Building Fast, Scalable Web Products 
         passionate about building responsive, user-friendly applications 
-        and growing as a Frontend Developer.
+        and growing as a Full Stack Developer.
       </p>
 
       <div className="flex gap-4 mt-15">
