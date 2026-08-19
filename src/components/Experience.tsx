@@ -1,4 +1,8 @@
-import { Briefcase } from "lucide-react";
+"use client";
+
+import { useState } from "react";
+import { ArrowUpRight, Briefcase } from "lucide-react";
+import ProjectModal, { type Project } from "./ProjectModal";
 
 const EXPERIENCES = [
   {
@@ -38,27 +42,30 @@ const EXPERIENCES = [
   },
 ];
 
-const PROJECTS = [
-  { name: "ThinkAIWorks", tech: "Next.js + Node.js + TypeScript + MongoDB" },
-  { name: "Teacher's Assistant", tech: "Next.js + Node.js + TypeScript + MongoDB" },
-  { name: "RiverCity Courier", tech: "Next.js + Node.js + TypeScript + MongoDB" },
-  { name: "Shozani", tech: "Next.js + Node.js + TypeScript + MongoDB" },
-  { name: "Workspax", tech: "Next.js + Node.js + TypeScript + MongoDB" },
-  { name: "Mini-ERP", tech: "Next.js + Node.js + TypeScript + MongoDB" },
-  { name: "Blog Platform", tech: "React + Node.js + MongoDB" },
-  { name: "LMS (Final Year Project)", tech: "Angular + Python + MySQL" },
-  { name: "LMS Mobile App", tech: "Flutter" },
-  { name: "Weather App", tech: "React.js" },
-  { name: "ChatBot", tech: "Python" },
-  { name: "Flight Management System", tech: "C++ (OOP)" },
-  { name: "Police Station Database", tech: "MySQL" },
-  { name: "E-store", tech: "React + Node.js + MongoDB" },
+const PROJECTS: Project[] = [
+  { name: "ThinkAIWorks", tech: "Next.js + Node.js + TypeScript + MongoDB", description: "A SaaS workforce management platform for project tracking, task assignment, attendance management, meeting scheduling, performance monitoring and team collaboration." },
+  { name: "Teacher's Assistant", tech: "Next.js + Node.js + TypeScript + MongoDB", description: "A web-based academic management system for organizing courses, managing students, recording assessments and monitoring performance." },
+  { name: "RiverCity Courier", tech: "Next.js + Node.js + TypeScript + MongoDB", description: "A courier delivery management platform for shipment tracking, order management, dispatch operations and secure user authentication." },
+  { name: "Shozani", tech: "Next.js + Node.js + TypeScript + MongoDB", description: "A study abroad platform for exploring international education opportunities, managing applications and connecting students with global institutions." },
+  { name: "Workspax", tech: "Next.js + Node.js + TypeScript + MongoDB", description: "A SaaS-style workspace platform for managing projects, tasks and team collaboration with a modern full-stack architecture." },
+  { name: "Mini-ERP", tech: "Next.js + Node.js + TypeScript + MongoDB", description: "A lightweight enterprise resource planning system for managing inventory, operations and business workflows." },
+  { name: "Blog Platform", tech: "React + Node.js + MongoDB", description: "A full-featured blogging platform with content creation, editing and management built on the MERN stack." },
+  { name: "LMS (Final Year Project)", tech: "Angular + Python + MySQL", description: "A learning management system supporting course delivery, student tracking and content management for academic institutions." },
+  { name: "LMS Mobile App", tech: "Flutter", description: "A cross-platform mobile companion app giving students on-the-go access to courses and progress." },
+  { name: "Weather App", tech: "React.js", description: "A real-time weather forecasting app with location-based search and a clean, responsive interface." },
+  { name: "ChatBot", tech: "Python", description: "A conversational chatbot for automated, rule-based user interactions." },
+  { name: "Flight Management System", tech: "C++ (OOP)", description: "A desktop application for managing flight bookings, schedules and passenger records using object-oriented design." },
+  { name: "Police Station Database", tech: "MySQL", description: "A relational database system for managing police station records, case tracking and personnel data." },
+  { name: "E-store", tech: "React + Node.js + MongoDB", description: "A full-stack e-commerce application with product listings, cart and order management on the MERN stack." },
 ];
 
 export default function Experience() {
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+
   return (
-    <section id="experience" className="section-bg px-4 py-24 md:py-32">
-      <div className="mx-auto max-w-5xl">
+    <>
+      <section id="experience" className="section-bg px-4 py-24 md:py-32">
+        <div className="mx-auto max-w-5xl">
         <div className="text-center">
           <span className="section-label">Experience</span>
           <h2 className="section-title">
@@ -115,19 +122,34 @@ export default function Experience() {
 
           <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {PROJECTS.map((project) => (
-              <div key={project.name} className="card flex items-center gap-3 p-4">
+              <button
+                key={project.name}
+                type="button"
+                onClick={() => setSelectedProject(project)}
+                className="card group flex items-center gap-3 p-4 text-left transition-all hover:-translate-y-1 hover:border-indigo-400/40 hover:shadow-lg hover:shadow-indigo-500/10"
+                aria-label={`View details for ${project.name}`}
+              >
                 <span className="h-2 w-2 shrink-0 rounded-full bg-gradient-to-r from-indigo-400 to-purple-400" />
                 <div className="min-w-0">
-                  <p className="truncate text-sm font-semibold text-slate-200">
+                  <p className="truncate text-sm font-semibold text-slate-200 transition-colors group-hover:text-indigo-300">
                     {project.name}
                   </p>
                   <p className="truncate text-xs text-slate-500">{project.tech}</p>
                 </div>
-              </div>
+                <ArrowUpRight size={16} aria-hidden="true" className="ml-auto shrink-0 text-slate-500 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-indigo-300" />
+              </button>
             ))}
           </div>
         </div>
       </div>
-    </section>
+      </section>
+
+      {selectedProject && (
+        <ProjectModal
+          project={selectedProject}
+          onClose={() => setSelectedProject(null)}
+        />
+      )}
+    </>
   );
 }
