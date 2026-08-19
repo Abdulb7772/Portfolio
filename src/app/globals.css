@@ -1,0 +1,90 @@
+@import "tailwindcss";
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #0b0f1d;
+  color: #e2e8f0;
+  font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-space), var(--font-inter), sans-serif;
+}
+
+/* Shared section background: deep navy + soft indigo/violet glows */
+.section-bg {
+  position: relative;
+  background-color: #0b0f1d;
+  overflow: hidden;
+}
+
+.section-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(900px 420px at 12% -5%, rgba(99, 102, 241, 0.16), transparent 65%),
+    radial-gradient(800px 420px at 92% 108%, rgba(168, 85, 247, 0.13), transparent 65%);
+}
+
+.section-bg > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Indigo -> violet gradient text */
+.text-gradient {
+  background: linear-gradient(92deg, #a5b4fc 0%, #c084fc 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Glassy card */
+.card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 1rem;
+}
+
+/* Section header: small accent label + big heading */
+.section-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #a5b4fc;
+}
+
+.section-label::before {
+  content: "";
+  width: 2rem;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #818cf8);
+}
+
+.section-title {
+  margin-top: 0.75rem;
+  font-size: 2rem;
+  line-height: 1.15;
+  font-weight: 700;
+  color: #f1f5f9;
+}
+
+@media (min-width: 768px) {
+  .section-title {
+    font-size: 2.5rem;
+  }
+}
